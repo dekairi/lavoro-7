@@ -1,0 +1,34 @@
+{
+  "name": "lavoro-7",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foaxdev/lavoro-7.git"
+  },
+  "author": "Irina K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foaxdev/lavoro-7/issues"
+  },
+  "homepage": "https://github.com/foaxdev/lavoro-7#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node": "^20.5.0",
+    "sass": "^1.64.1"
+  }
+}
