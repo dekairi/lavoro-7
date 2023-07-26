@@ -70,7 +70,7 @@ function css() {
 // Html
 
 function html() {
-  const source = './*.html';
+  const source = '.src/*.html';
 
   return src(source)
     .pipe(changed(source))
