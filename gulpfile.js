@@ -10,13 +10,15 @@ const {
 
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
 const browsersync = require('browser-sync').create();
 
 // Clean build
@@ -47,7 +49,7 @@ function js() {
 // CSS function
 
 function css() {
-  const source = './src/scss/main.scss';
+  const source = './src/scss/*.scss';
 
   return src(source)
     .pipe(changed(source))
@@ -56,12 +58,24 @@ function css() {
       overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(concat('main.css'))
     .pipe(rename({
       extname: '.min.css'
     }))
     .pipe(cssnano())
     .pipe(dest('./build/css/'))
     .pipe(browsersync.stream());
+}
+
+// Html
+
+function html() {
+  const source = './*.html';
+
+  return src(source)
+    .pipe(changed(source))
+    .pipe(posthtml([include()]))
+    .pipe(dest('./build/'));
 }
 
 // Optimize images
@@ -94,4 +108,4 @@ function browserSync() {
 // Tasks to define the execution of the functions simultaneously or in series
 
 exports.watch = parallel(watchFiles, browserSync);
-exports.default = series(clear, parallel(js, css, img));
+exports.default = series(clear, parallel(js, css, img, html));
