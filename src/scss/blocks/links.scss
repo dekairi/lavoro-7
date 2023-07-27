@@ -1,0 +1,32 @@
+.links {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-left: 30px;
+  border-left: 1px solid #DFDFDF;
+
+  h3 {
+    color: $gray;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  li {
+    @include list-style-reset();
+  }
+
+  &__list {
+    padding: 0;
+
+    li {
+      @include list-style-reset();
+    }
+
+    a {
+      color: rgba(55, 69, 74, 0.60);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+}

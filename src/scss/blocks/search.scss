@@ -1,0 +1,19 @@
+.search {
+  position: absolute;
+
+  input {
+    background-color: #62A53C;
+    border: none;
+    height: 70px;
+  }
+
+  label {
+    display: block;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+  }
+}

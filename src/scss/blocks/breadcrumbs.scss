@@ -1,0 +1,41 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 33px 0;
+
+  li {
+    @include list-style-reset();
+    padding-right: 22px;
+    position: relative;
+
+    a {
+      color: rgba(55, 69, 74, 0.60);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    &:first-child a {
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 3.5px);
+        right: 8px;
+        border: solid #37454A;
+        opacity: .6;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

@@ -3,7 +3,30 @@
 
 /* Global styles */
 @import "mixins.scss";
+@import "variables.scss";
 @import "global.scss";
+@import "fonts.scss";
 
 /* Blocks */
-
+@import "blocks/upper-navigation.scss";
+@import "blocks/lower-navigation.scss";
+@import "blocks/upper-contacts.scss";
+@import "blocks/answers.scss";
+@import "blocks/answers-carousel.scss";
+@import "blocks/feedback.scss";
+@import "blocks/button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/footer.scss";
+@import "blocks/links.scss";
+@import "blocks/contacts-list.scss";
+@import "blocks/consultation.scss";
+@import "blocks/offer.scss";
+@import "blocks/features.scss";
+@import "blocks/about.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/menu.scss";
+@import "blocks/search.scss";
+@import "blocks/wishlist.scss";
+@import "blocks/cart.scss";

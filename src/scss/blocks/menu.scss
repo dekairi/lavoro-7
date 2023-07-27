@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+
+  li {
+    @include list-style-reset();
+    padding: 0 28px;
+    border-right: 1px solid rgba(55, 69, 74, 0.2);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    a {
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}

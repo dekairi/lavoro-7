@@ -1,0 +1,39 @@
+.answers-carousel {
+  margin-bottom: 20px;
+
+  &__item {
+    & > div {
+      height: 100%;
+      border-radius: 8px;
+      border: 1px solid #DFDFDF;
+      background-color: #FFF;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    }
+  }
+
+  &__image-wrap {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    background-color: #EDEEF0;
+  }
+
+  &__text-wrap {
+    padding: 25px 25px 50px 25px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $gray;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $gray;
+    }
+  }
+}

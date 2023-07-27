@@ -15,3 +15,22 @@ img {
 a {
   text-decoration: none;
 }
+
+.container p,
+.container strong,
+.container span,
+.container i {
+  font-family: "Proxima Nova", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #37454A;
+  text-align: center;
+
+  margin: 0;
+}

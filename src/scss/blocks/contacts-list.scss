@@ -1,0 +1,23 @@
+.contacts-list {
+  padding: 0;
+  margin-bottom: 22px;
+
+  li {
+    @include list-style-reset();
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    a {
+      color: rgba(55, 69, 74, 0.60);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-left: 14px;
+    }
+
+    &:nth-child(n + 3) a {
+      text-decoration: underline;
+    }
+  }
+}
