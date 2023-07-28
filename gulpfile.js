@@ -82,6 +82,24 @@ function html() {
     .pipe(dest('./build/'));
 }
 
+// Files
+
+function files() {
+  const source = './src/files/*';
+
+  return src(source)
+    .pipe(dest('./build/files/'));
+}
+
+// Carousel
+
+function carousel() {
+  const source = './src/owlcarousel/*';
+
+  return src(source)
+    .pipe(dest('./build/owlcarousel/'));
+}
+
 // Optimize images
 
 function img() {
@@ -117,4 +135,4 @@ function browserSync() {
 // Tasks to define the execution of the functions simultaneously or in series
 
 exports.watch = parallel(watchFiles, browserSync);
-exports.default = series(clear, parallel(html, css, img, js, fonts));
+exports.default = series(clear, parallel(html, css, img, js, fonts, files, carousel));

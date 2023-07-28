@@ -1,5 +1,17 @@
 .search {
   position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+
+  @media only screen and (max-width: 1419px) {
+    width: 15%;
+  }
+
+  @media only screen and (max-width: 1229px) {
+    width: 100%;
+    position: relative;
+  }
 
   input {
     background-color: #62A53C;
@@ -15,5 +27,13 @@
     margin: 0;
     padding: 0;
     height: 0;
+  }
+
+  button {
+    position: absolute;
+    top: 23px;
+    left: 36px;
+    border: none;
+    background-color: transparent;
   }
 }

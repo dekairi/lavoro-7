@@ -19,9 +19,18 @@
     line-height: normal;
   }
 
+  p.contacts__text {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   form {
     display: flex;
     align-items: center;
+
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      padding-top: 15px;
+    }
 
     label {
       display: block;
@@ -57,6 +66,8 @@
       font-size: 16px;
       font-weight: 600;
       line-height: 22px;
+      width: auto;
+      height: auto;
 
       &:hover {
         color: $green-primary;

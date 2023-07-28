@@ -1,12 +1,6 @@
 .features {
   padding-bottom: 35px;
 
-  & > div:nth-child(2) {
-    & > div {
-      padding-bottom: 0;
-    }
-  }
-
   &__item {
     padding-bottom: 70px;
     position: relative;
@@ -29,6 +23,10 @@
           color: #76B72A;
         }
       }
+    }
+
+    &:nth-child(n + 3) {
+      padding-bottom: 0;
     }
   }
 

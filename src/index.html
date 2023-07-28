@@ -6,22 +6,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="Экспресс диагностика">
+  <link rel="preload" href="fonts/ProximaNova.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ProximaNova-Light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ProximaNova-Semibold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ProximaNova-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ProximaNova-RegularIt.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <nav class="container upper-navigation">
-      <a class="upper-navigation__logo" aria-label="Домой" href="/">
-        <picture>
-          <img src="img/logo@1x.png" srcset="
+      <div class="upper-contacts row">
+        <a class="upper-contacts__logo col-12 col-md-2 col-lg-3 col-xl-2" aria-label="Домой" href="/">
+          <picture>
+            <img src="img/logo@1x.png" srcset="
                       img/logo@1x.png 1x,
                       img/logo@2x.png 2x
                     " alt="Логотип Vimeo">
-        </picture>
-      </a>
-      <div class="upper-contacts">
-        <div class="upper-contacts__position">
+          </picture>
+        </a>
+        <div class="upper-contacts__position col-12 col-md-5 col-lg-4 col-xl-3">
           <strong class="upper-contacts__salon">Текст текст</strong>
           <div class="upper-contacts__city">
             <div>
@@ -34,55 +42,73 @@
             <p class="upper-contacts__counter">текст (10)</p>
           </div>
         </div>
-        <div class="button upper-contacts__button">
-          <p>Ш Б<span>н м к</span></p>
-          <a class="button__link" href="#" aria-label="Запишитесь на проверку">Запишитесь на проверку</a>
+        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+          <div class="button upper-contacts__button">
+            <p>Ш Б<span>н м к</span></p>
+            <a class="button__link" href="#" aria-label="Запишитесь на проверку">Запишитесь на проверку</a>
+          </div>
         </div>
-        <div class="upper-contacts__phonecall">
+        <div class="upper-contacts__phonecall col-8 offset-md-6 col-md-4 offset-lg-6 col-lg-4 offset-xl-0 col-xl-2 d-flex justify-content-end">
           <strong>+7 (800) 111-111-1</strong>
           <a href="tel:+78001111111" aria-label="Позвонить по номеру +78001111111">Позвоните мне</a>
         </div>
-        <div class="wishlist">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8148 24C13.8148 24 0.453343 14.1175 0.0406199 6.85044C-0.618214 1.62671 6.87169 -2.94834 12.7509 2.36927C13.9831 3.52414 13.8283 3.52625 13.8283 3.52625C13.8283 3.52625 14.11 3.56304 15.0449 2.36927C17.5957 -1.54736 28.3104 -0.874574 27.6165 6.97604C27.0347 14.1517 13.8148 24 13.8148 24Z" fill="#E34C4C"/>
-          </svg>
-          <span>7</span>
-        </div>
-        <div class="cart">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0533 21.4397C24.8729 21.4397 26.3466 22.9085 26.3466 24.7215C26.3466 26.5312 24.8729 28 23.0533 28C21.2337 28 19.76 26.5312 19.76 24.7215C19.76 22.9085 21.2337 21.4397 23.0533 21.4397ZM9.88004 21.4397C11.698 21.4397 13.1734 22.9085 13.1734 24.7215C13.1734 26.5312 11.698 28 9.88004 28C8.06047 28 6.5867 26.5312 6.5867 24.7215C6.5867 22.9085 8.06047 21.4397 9.88004 21.4397ZM29.6401 6.68219L27.9934 11.6024C27.3841 12.9807 26.5196 14.881 24.7001 14.881H8.82616L9.02047 16.5227H29.6401L27.9934 19.8012H7.16631L6.1075 19.9247L4.1529 3.40367H1.64667C0.736062 3.40367 0 2.66925 0 1.76359C0 0.857916 0.579628 0.0230534 1.48859 0.0230534L7.06587 0L7.48412 3.54034C7.68996 3.45966 7.92378 3.40367 8.23336 3.40367H27.9934C29.813 3.40367 29.6401 4.8725 29.6401 6.68219Z" fill="#37454A" fill-opacity="0.9"/>
-          </svg>
-          <span>3</span>
+        <div class="col-4 col-md-2 col-lg-2 col-xl-2 d-flex justify-content-end">
+          <div class="wishlist">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8148 24C13.8148 24 0.453343 14.1175 0.0406199 6.85044C-0.618214 1.62671 6.87169 -2.94834 12.7509 2.36927C13.9831 3.52414 13.8283 3.52625 13.8283 3.52625C13.8283 3.52625 14.11 3.56304 15.0449 2.36927C17.5957 -1.54736 28.3104 -0.874574 27.6165 6.97604C27.0347 14.1517 13.8148 24 13.8148 24Z" fill="#E34C4C"/>
+            </svg>
+            <span>7</span>
+          </div>
+          <div class="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0533 21.4397C24.8729 21.4397 26.3466 22.9085 26.3466 24.7215C26.3466 26.5312 24.8729 28 23.0533 28C21.2337 28 19.76 26.5312 19.76 24.7215C19.76 22.9085 21.2337 21.4397 23.0533 21.4397ZM9.88004 21.4397C11.698 21.4397 13.1734 22.9085 13.1734 24.7215C13.1734 26.5312 11.698 28 9.88004 28C8.06047 28 6.5867 26.5312 6.5867 24.7215C6.5867 22.9085 8.06047 21.4397 9.88004 21.4397ZM29.6401 6.68219L27.9934 11.6024C27.3841 12.9807 26.5196 14.881 24.7001 14.881H8.82616L9.02047 16.5227H29.6401L27.9934 19.8012H7.16631L6.1075 19.9247L4.1529 3.40367H1.64667C0.736062 3.40367 0 2.66925 0 1.76359C0 0.857916 0.579628 0.0230534 1.48859 0.0230534L7.06587 0L7.48412 3.54034C7.68996 3.45966 7.92378 3.40367 8.23336 3.40367H27.9934C29.813 3.40367 29.6401 4.8725 29.6401 6.68219Z" fill="#37454A" fill-opacity="0.9"/>
+            </svg>
+            <span>3</span>
+          </div>
         </div>
       </div>
     </nav>
     <nav class="lower-navigation">
       <div class="container">
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст текст текст">Текст текст текст</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="/" aria-label="Текст и текст">Текст и текст</a>
-          </li>
-        </ul>
-        <div class="search">
-          <label for="site-search">Поиск по сайту</label>
-          <input type="search" id="site-search" name="q">
-        </div>
+        <nav>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст текст текст">Текст текст текст</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст текст">Текст текст</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/" aria-label="Текст и текст">Текст и текст</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+      <form class="search">
+        <label for="site-search">Поиск по сайту</label>
+        <input id="site-search" class="form-control mr-sm-2" type="search" aria-label="Поиск по сайту">
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_3348_17)">
+              <path d="M23.7888 22.7761L17.9565 16.9437C19.521 15.145 20.4682 12.7982 20.4682 10.2333C20.4682 4.58714 15.8758 0 10.235 0C4.58885 0 0.00170898 4.59246 0.00170898 10.2333C0.00170898 15.8741 4.59417 20.4665 10.235 20.4665C12.7999 20.4665 15.1467 19.5193 16.9454 17.9548L22.7778 23.7871C22.9161 23.9255 23.1024 24 23.2833 24C23.4642 24 23.6505 23.9308 23.7888 23.7871C24.0656 23.5104 24.0656 23.0528 23.7888 22.7761ZM1.43319 10.2333C1.43319 5.38004 5.38175 1.43681 10.2296 1.43681C15.0829 1.43681 19.0261 5.38537 19.0261 10.2333C19.0261 15.0812 15.0829 19.035 10.2296 19.035C5.38175 19.035 1.43319 15.0865 1.43319 10.2333Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_3348_17">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </form>
     </nav>
   </header>
 
@@ -90,7 +116,7 @@
     <section class="about">
       <div class="container">
         <div class="row">
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <ul class="breadcrumbs">
               <li>
                 <a href="/" aria-label="Домой">
@@ -120,14 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="col-5">
-            <picture>
-              <img src="img/doc@1x.jpg" srcset="
-                      img/doc@1x.jpg 1x,
-                      img/doc@2x.jpg 2x
-                    " alt="Фото доктора">
-            </picture>
-          </div>
+          <div class="about__image-wrap col-12 col-md-5"></div>
         </div>
       </div>
     </section>
@@ -137,7 +156,7 @@
         <h2>Заголовок заголовок заголовок</h2>
         <div class="features">
           <div class="row">
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="41" height="31" viewBox="0 0 41 31" fill="none">
@@ -159,7 +178,7 @@
                 <strong class="features__text">Текст <span>Текст текст</span> Текст текст Текст</strong>
               </div>
             </div>
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="27" viewBox="0 0 36 27" fill="none">
@@ -179,7 +198,7 @@
                 <strong class="features__text">Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст</strong>
               </div>
             </div>
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none">
@@ -199,9 +218,7 @@
                 <strong class="features__text">Текст Текст Текст Текст</strong>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="41" viewBox="0 0 30 41" fill="none">
@@ -226,7 +243,7 @@
                 <strong class="features__text">Текст Текст Текст Текст Текст Текст Текст Текст</strong>
               </div>
             </div>
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="26" viewBox="0 0 36 26" fill="none">
@@ -252,7 +269,7 @@
                 <strong class="features__text"><span>Текст Текст</span>, Текст Текст Текст Текст Текст Текст</strong>
               </div>
             </div>
-            <div class="features__item col">
+            <div class="features__item col-sm-12 col-md-6 col-lg-4">
               <div>
                 <div class="features__svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36" fill="none">
@@ -282,7 +299,7 @@
     <section class="consultation">
       <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="consultation__text col-12 order-2 col-lg-8 order-lg-0">
             <h2>Текст текст:</h2>
             <ul>
               <li>текст текст</li>
@@ -293,7 +310,7 @@
               <li>текст текст текст текст текст текст текст текст текст текст текст текст текст текст</li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4 text-center">
             <picture>
               <img src="img/consulate@1x.jpg" srcset="
                         img/consulate@1x.jpg 1x,
@@ -357,7 +374,92 @@
               </div>
             </div>
           </div>
+          <div class="answers-carousel__item col-sm">
+            <div>
+              <div class="answers-carousel__image-wrap">
+                <picture>
+                  <img src="img/answer1@1x.jpg" srcset="
+                            img/answer1@1x.jpg 1x,
+                            img/answer1@2x.jpg 2x
+                          " alt="Фото доктора, который вас осматривает">
+                </picture>
+              </div>
+              <div class="answers-carousel__text-wrap">
+                <h3>Вопрос вопрос вопрос?</h3>
+                <p>Текст Текст Текст Текст Текст Текст</p>
+              </div>
+            </div>
+          </div>
+          <div class="answers-carousel__item col-sm">
+            <div>
+              <div class="answers-carousel__image-wrap">
+                <picture>
+                  <img src="img/answer2@1x.jpg" srcset="
+                            img/answer2@1x.jpg 1x,
+                            img/answer2@2x.jpg 2x
+                          " alt="Фото проверки зрения">
+                </picture>
+              </div>
+              <div class="answers-carousel__text-wrap">
+                <h3>Вопрос вопрос вопрос?</h3>
+                <p>Текст Текст Текст Текст Текст Текст</p>
+              </div>
+            </div>
+          </div>
+          <div class="answers-carousel__item col-sm">
+            <div>
+              <div class="answers-carousel__image-wrap">
+                <picture>
+                  <img src="img/answer3@1x.jpg" srcset="
+                            img/answer3@1x.jpg 1x,
+                            img/answer3@2x.jpg 2x
+                          " alt="Фото коррекции зрения">
+                </picture>
+              </div>
+              <div class="answers-carousel__text-wrap">
+                <h3>Вопрос вопрос вопрос?</h3>
+                <p><b>Текст</b> Текст Текст Текст Текст Текст Текст Текст Текст Текст*</p>
+              </div>
+            </div>
+          </div>
         </div>
+        <style>
+          .owl-carousel .owl-stage {
+            display: flex;
+          }
+          .owl-carousel .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+          }
+        </style>
+        <script>
+          $(document).ready(function(){
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+              items: 3,
+              lazyLoad: true,
+              loop: true,
+              margin: 0,
+              autoplay: true,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: true,
+              responsive:{
+                0: {
+                  items: 2,
+                },
+                767: {
+                  items: 3,
+                }
+              }
+            });
+            $('.play').on('click',function(){
+              owl.trigger('play.owl.autoplay',[5000])
+            })
+            $('.stop').on('click',function(){
+              owl.trigger('stop.owl.autoplay')
+            })
+          });
+        </script>
         <strong>*текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</strong>
       </div>
     </section>
@@ -365,7 +467,7 @@
     <section class="feedback">
       <div class="container">
         <div class="row">
-          <div class="feedback__text-wrap col-7">
+          <div class="feedback__text-wrap col-12 col-md-7">
             <h2 class="feedback__question">Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?</h2>
             <div class="feedback__answer">
               <ol>
@@ -378,14 +480,7 @@
               <p>Текст Текст Текст Текст Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
             </div>
           </div>
-          <div class="feedback__image-wrap col-5">
-            <picture>
-              <img src="img/doc2@1x.jpg" srcset="
-                          img/doc2@1x.jpg 1x,
-                          img/doc2@2x.jpg 2x
-                        " alt="Фото осмотра доктором">
-            </picture>
-          </div>
+          <div class="feedback__image-wrap col-12 col-md-5"></div>
         </div>
       </div>
       <div class="button button--green button--with-arrow">
@@ -397,15 +492,45 @@
       <div class="container">
         <div class="row">
           <h2>Контакты</h2>
-          <p class="col">Текст текст текст текст текст текст текст</p>
-          <form action="#" class="col">
+          <p class="contacts__text col-sm-12 col-md-6 col-xl-4">Текст текст текст текст текст текст текст</p>
+          <form id="subscribe-form" action="#" class="col-sm-12 col-md-6 col-xl-5">
               <div>
                 <label for="email" aria-label="Введите свой e-mail">Введите свой e-mail</label>
                 <input type="email" id="email" placeholder="Введите свой e-mail" required />
               </div>
-            <button class="button button--green" type="submit">Подписаться</button>
+            <button id="subscribe" class="button button--green" type="submit">Подписаться</button>
           </form>
-          <div class="social col">
+          <script>
+            $( "#subscribe-form" ).on( "submit", function( event ) {
+              event.preventDefault();
+              $.ajax({
+                url: 'files/request.php',
+                type: 'POST',
+                contentType: "text/html; charset=utf-8",
+                dataType: "text",
+                data: $("#email").val(),
+                async: false,
+                success: function (data)
+                {
+                  alert(data.text);
+                },
+                cache: false,
+                processData: false
+              });
+            } );
+          </script>
+          <!--<script>
+            $("#subscribe").click(function(event) {
+              event.preventDefault();
+              var email = $("#email").val();
+              $.get('files/request.php', function(data) {
+                console.log(data);
+                $("#subscribe").html(data);
+                $("#subscribe").addClass('button--gray');
+              });
+            });
+          </script>-->
+          <div class="social col-sm-12 col-md-6 col-xl-3">
             <p>Мы в соц. сетях:</p>
             <ul>
               <li>
@@ -475,7 +600,7 @@
     <nav>
       <div class="container">
         <div class="row">
-          <div class="col-3">
+          <div class="col-sm-12 col-md-3">
             <div class="logo">
               <a class="logo__link" aria-label="Домой">
                 <picture>
@@ -554,8 +679,8 @@
             </ul>
             <p>текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
           </div>
-          <ul class="links col-9 row">
-            <li class="col">
+          <ul class="links col-sm-12 col-md-9 row">
+            <li class="col-6 col-sm-3">
               <h3>Заголовок</h3>
               <ul class="links__list">
                 <li><a href="#" aria-label="Название">Название</a></li>
@@ -565,7 +690,7 @@
                 <li><a href="#" aria-label="Название">Название название</a></li>
               </ul>
             </li>
-            <li class="col">
+            <li class="col-6 col-sm-3">
               <h3>Заголовок</h3>
               <ul class="links__list">
                 <li><a href="#" aria-label="Название">Название</a></li>
@@ -578,7 +703,7 @@
                 <li><a href="#" aria-label="Название">Название название</a></li>
               </ul>
             </li>
-            <li class="col">
+            <li class="col-6 col-sm-3">
               <h3>Заголовок</h3>
               <ul class="links__list">
                 <li><a href="#" aria-label="Название">Название</a></li>
@@ -591,7 +716,7 @@
 
               </ul>
             </li>
-            <li class="col">
+            <li class="col-6 col-sm-3">
               <h3>Заголовок</h3>
               <ul class="links__list">
                 <li><a href="#" aria-label="Название">Название</a></li>
@@ -619,6 +744,7 @@
     </section>
   </footer>
 
+  <script src="owlcarousel/owl.carousel.min.js"></script>
   <script src="js/picturefill.js"></script>
 </body>
 </html>

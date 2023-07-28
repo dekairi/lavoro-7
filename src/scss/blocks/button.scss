@@ -24,6 +24,8 @@
     border-radius: 35px;
     background: linear-gradient(90deg, #6CB644 0%, #82CA2C 100%);
     box-shadow: 0 10px 20px 0 rgba(132, 199, 55, 0.30);
+    height: 72px;
+    width: 332px;
 
     .button__link {
       font-size: 16px;
@@ -43,7 +45,7 @@
 
   &--with-arrow {
     position: relative;
-    padding: 24px 80px 22px 30px;
+    padding: 24px 70px 22px 30px;
 
     &::before {
       content: "";

@@ -4,6 +4,15 @@
   padding-left: 30px;
   border-left: 1px solid #DFDFDF;
 
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-left: 15px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    padding-left: 15px;
+    border-left: none;
+  }
+
   h3 {
     color: $gray;
     font-size: 16px;
