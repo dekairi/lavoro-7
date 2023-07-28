@@ -17,6 +17,11 @@
     background-color: #62A53C;
     border: none;
     height: 70px;
+
+    &:focus {
+      background-color: $green-primary;
+      border-color: transparent;
+    }
   }
 
   label {

@@ -15,13 +15,16 @@
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <nav class="container upper-navigation">
       <div class="upper-contacts row">
-        <a class="upper-contacts__logo col-12 col-md-2 col-lg-3 col-xl-2" aria-label="Домой" href="/">
+        <a class="upper-contacts__logo col-12 col-sm-6 col-md-2 col-lg-3 col-xl-2" aria-label="Домой" href="/">
           <picture>
             <img src="img/logo@1x.png" srcset="
                       img/logo@1x.png 1x,
@@ -29,7 +32,7 @@
                     " alt="Логотип Vimeo">
           </picture>
         </a>
-        <div class="upper-contacts__position col-12 col-md-5 col-lg-4 col-xl-3">
+        <div class="upper-contacts__position col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
           <strong class="upper-contacts__salon">Текст текст</strong>
           <div class="upper-contacts__city">
             <div>
@@ -42,17 +45,17 @@
             <p class="upper-contacts__counter">текст (10)</p>
           </div>
         </div>
-        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
           <div class="button upper-contacts__button">
             <p>Ш Б<span>н м к</span></p>
             <a class="button__link" href="#" aria-label="Запишитесь на проверку">Запишитесь на проверку</a>
           </div>
         </div>
-        <div class="upper-contacts__phonecall col-8 offset-md-6 col-md-4 offset-lg-6 col-lg-4 offset-xl-0 col-xl-2 d-flex justify-content-end">
+        <div class="upper-contacts__phonecall col-8 col-sm-6 offset-md-6 col-md-4 offset-lg-6 col-lg-4 offset-xl-0 col-xl-2 d-flex justify-content-end">
           <strong>+7 (800) 111-111-1</strong>
           <a href="tel:+78001111111" aria-label="Позвонить по номеру +78001111111">Позвоните мне</a>
         </div>
-        <div class="col-4 col-md-2 col-lg-2 col-xl-2 d-flex justify-content-end">
+        <div class="col-4 offset-sm-9 col-sm-3 offset-md-0 col-md-2 col-lg-2 col-xl-2 d-flex justify-content-end">
           <div class="wishlist">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8148 24C13.8148 24 0.453343 14.1175 0.0406199 6.85044C-0.618214 1.62671 6.87169 -2.94834 12.7509 2.36927C13.9831 3.52414 13.8283 3.52625 13.8283 3.52625C13.8283 3.52625 14.11 3.56304 15.0449 2.36927C17.5957 -1.54736 28.3104 -0.874574 27.6165 6.97604C27.0347 14.1517 13.8148 24 13.8148 24Z" fill="#E34C4C"/>
@@ -290,8 +293,10 @@
             </div>
           </div>
         </div>
-        <div class="button button--green button--with-arrow">
-          <a class="button__link" href="/" aria-label="Записаться на проверку">Записаться на проверку</a>
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="button button--green button--with-arrow">
+            <a class="button__link" href="/" aria-label="Записаться на проверку">Записаться на проверку</a>
+          </div>
         </div>
       </div>
     </section>
@@ -445,6 +450,9 @@
               autoplayHoverPause: true,
               responsive:{
                 0: {
+                  items: 1,
+                },
+                576: {
                   items: 2,
                 },
                 767: {
@@ -483,8 +491,10 @@
           <div class="feedback__image-wrap col-12 col-md-5"></div>
         </div>
       </div>
-      <div class="button button--green button--with-arrow">
-        <a class="button__link" href="/" aria-label="Записаться на проверку">Записаться на проверку</a>
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="button button--green button--with-arrow">
+          <a class="button__link" href="/" aria-label="Записаться на проверку">Записаться на проверку</a>
+        </div>
       </div>
     </section>
 
@@ -504,7 +514,7 @@
             $( "#subscribe-form" ).on( "submit", function( event ) {
               event.preventDefault();
               $.ajax({
-                url: 'files/request.php',
+                url: 'files/request.txt',
                 type: 'POST',
                 contentType: "text/html; charset=utf-8",
                 dataType: "text",
@@ -512,24 +522,18 @@
                 async: false,
                 success: function (data)
                 {
-                  alert(data.text);
+                  alert(data);
+                },
+                error: function () {
+                  $("#subscribe").html('спасибо');
+                  $("#subscribe").addClass('button--gray');
+                  $("#subscribe").removeClass('button--green');
                 },
                 cache: false,
                 processData: false
               });
-            } );
-          </script>
-          <!--<script>
-            $("#subscribe").click(function(event) {
-              event.preventDefault();
-              var email = $("#email").val();
-              $.get('files/request.php', function(data) {
-                console.log(data);
-                $("#subscribe").html(data);
-                $("#subscribe").addClass('button--gray');
-              });
             });
-          </script>-->
+          </script>
           <div class="social col-sm-12 col-md-6 col-xl-3">
             <p>Мы в соц. сетях:</p>
             <ul>

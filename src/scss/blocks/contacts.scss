@@ -32,6 +32,14 @@
       padding-top: 15px;
     }
 
+    @media only screen and (max-width: 575px) {
+      flex-direction: column;
+
+      & > div {
+        padding-bottom: 15px;
+      }
+    }
+
     label {
       display: block;
       color: transparent;

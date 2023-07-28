@@ -34,6 +34,16 @@
       color: #FFF;
     }
 
+    @media only screen and (min-width: 230px) and (max-width: 575px) {
+      height: auto;
+      width: 300px;
+
+      .button__link {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
     &:hover {
       background: linear-gradient(90deg, #FFF 0%, #f4f4f4 100%);
 
@@ -41,6 +51,11 @@
         color: $green-primary;
       }
     }
+  }
+
+  &--gray {
+    background-color: $gray;
+    border-color: #FFF;
   }
 
   &--with-arrow {
