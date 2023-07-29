@@ -1,12 +1,13 @@
 .button {
   display: inline-block;
-  padding: 15px 30px;
   border-radius: 30px;
   border: 1px solid $green-primary;
   background: #FFF;
   cursor: pointer;
 
   &__link {
+    display: inline-block;
+    padding: 15px 30px;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
@@ -60,7 +61,10 @@
 
   &--with-arrow {
     position: relative;
-    padding: 24px 70px 22px 30px;
+
+    a {
+      padding: 24px 70px 22px 30px;
+    }
 
     &::before {
       content: "";
