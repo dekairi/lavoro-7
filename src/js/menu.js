@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggle() {
       menu.classList.toggle('menu--closed');
+      icon.classList.toggle('menu-icon--opened');
     }
 
     function windowResize() {
