@@ -1,6 +1,6 @@
 .upper-contacts {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
 
   &__logo {
@@ -10,6 +10,28 @@
   &__position {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 1199px) {
+      strong {
+        display: none;
+      }
+    }
+  }
+
+  &__position-link {
+    display: none;
+
+    @media only screen and (max-width: 1199px) {
+      display: flex;
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 
   strong.upper-contacts____salon {
@@ -18,32 +40,6 @@
     line-height: 22px;
     text-transform: uppercase;
     padding-bottom: 6px;
-  }
-
-  p.upper-contacts__city-name {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    color: $green-primary;
-    padding-right: 13px;
-  }
-
-  p.upper-contacts__counter {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: $gray;
-    opacity: 0.6;
-    padding-left: 13px;
-    border-left: 1px solid #DFDFDF;
-  }
-
-  &__city {
-    display: flex;
-
-    & > div {
-      display: flex;
-    }
   }
 
   svg {
@@ -55,16 +51,58 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    padding-right: 0;
 
-    @media only screen and (max-width: 1199px) {
-      padding-bottom: 20px;
+    svg {
+      display: none;
     }
 
-    strong {
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 20px;
+      padding-right: 15px;
+    }
+
+    a:first-child {
       color: $gray;
       font-size: 18px;
       font-weight: 700;
       line-height: 30px;
+      text-decoration: none;
+
+      @media only screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+
+    a:last-child {
+      @media only screen and (max-width: 1199px) {
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green-primary;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border: 2px solid $green-primary;
+        cursor: pointer;
+
+        svg {
+          display: block;
+          margin: 0;
+          width: 40px;
+        }
+
+        &:hover {
+          background-color: #FFF;
+
+          svg path {
+            fill: $green-primary;
+          }
+        }
+      }
     }
 
     a {

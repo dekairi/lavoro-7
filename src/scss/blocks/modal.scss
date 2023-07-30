@@ -57,4 +57,21 @@
       color: $green-primary;
     }
   }
+
+  &--call-me {
+    h2 {
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+      margin: 0;
+    }
+
+    .modal__input-wrap {
+      justify-content: center;
+
+      .input {
+        width: auto;
+      }
+    }
+  }
 }
