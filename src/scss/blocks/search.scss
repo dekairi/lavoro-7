@@ -13,6 +13,12 @@
     position: relative;
   }
 
+  @media only screen and (max-width: 767px) {
+    width: calc(100% - 100px);
+    position: absolute;
+    right: 15px;
+  }
+
   input {
     background-color: #62A53C;
     border: none;

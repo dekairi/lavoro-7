@@ -1,15 +1,23 @@
 .menu {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 0 24px;
   margin-bottom: 0;
+  color: #fff;
+  display: flex;
+  position: relative;
+  z-index: 2;
+
+  &--closed {
+    display: none;
+  }
 
   li {
     @include list-style-reset();
     padding: 0 28px;
     margin: 24px 0 0 0;
     border-right: 1px solid rgba(55, 69, 74, 0.2);
+    cursor: pointer;
 
     &:first-child {
       padding-left: 0;
@@ -26,13 +34,7 @@
       }
     }
 
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      &:nth-child(3) {
-        border-right: none;
-      }
-    }
-
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 767px) {
       width: 100%;
 
       &:first-child {
@@ -40,7 +42,7 @@
       }
     }
 
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 767px) {
       border-right: none;
     }
 

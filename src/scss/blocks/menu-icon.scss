@@ -1,0 +1,17 @@
+.menu-icon {
+  display: none;
+  background-color: #62A53C;
+  height: 70px;
+  width: 70px;
+  background-image: url('../img/menu_icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  vertical-align: middle;
+  background-size: 50% 40%;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
