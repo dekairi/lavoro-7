@@ -16,6 +16,10 @@
         display: none;
       }
     }
+
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 20px;
+    }
   }
 
   &__position-link {
@@ -32,6 +36,10 @@
         height: 50px;
       }
     }
+
+    @media only screen and (max-width: 991px) {
+      margin-left: auto;
+    }
   }
 
   strong.upper-contacts____salon {
@@ -43,7 +51,6 @@
   }
 
   svg {
-    margin-right: 10px;
     align-self: center;
   }
 
@@ -84,15 +91,15 @@
         align-items: center;
         background-color: $green-primary;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border: 2px solid $green-primary;
         cursor: pointer;
 
         svg {
           display: block;
           margin: 0;
-          width: 40px;
+          width: 30px;
         }
 
         &:hover {
@@ -102,6 +109,10 @@
             fill: $green-primary;
           }
         }
+      }
+
+      @media only screen and (max-width: 991px) {
+        margin-right: auto;
       }
     }
 
